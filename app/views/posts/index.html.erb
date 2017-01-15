@@ -2,7 +2,7 @@
 
 <%= render :template => 'posts/new' %>
 
-<% Post.all.each do |post| %>
+<% @posts.each do |post| %>
 <body>
   <div id="main-container" class="container">
     <div class="panel panel-default" style="margin-top:10px">
