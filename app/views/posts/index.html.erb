@@ -5,7 +5,20 @@
 <% end %>
 
 <% Post.all.each do |post| %>
-  <div>
-    <%= post.description %>
+<body>
+  <div id="main-container" class="container">
+    <div class="panel panel-default" style="margin-top:10px">
+      <div class="panel-body">
+        <div id="content" class="col-md-10">
+          <%= post.description %>
+        </div>
+        <div id="sidebar" class="col-md-2">
+          <button type="button" class="btn btn-primary">Delete</button>
+        </div>
+      </div>
+      <div class="panel-footer">
+        <div id="footer">Posted on ...</div>
+      </div>
+    </div>
   </div>
 <% end %>
