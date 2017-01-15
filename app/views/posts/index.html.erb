@@ -3,3 +3,9 @@
   <%= f.text_area :description, hide_label: true, placeholder: "Leave a comment..." %>
   <%= f.submit "Post" %>
 <% end %>
+
+<% Post.all.each do |post| %>
+  <div>
+    <%= post.description %>
+  </div>
+<% end %>

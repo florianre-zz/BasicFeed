@@ -14,7 +14,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     if @post.save
       flash[:success] = "Success!"
-      redirect_to post_path(@post)
+      redirect_to request.referrer
     else
       flash[:error] = "There was a problem..."
     end
