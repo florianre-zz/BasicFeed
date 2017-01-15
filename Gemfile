@@ -42,6 +42,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5'
   gem 'capybara'
   gem 'bootstrap_form'
+  gem 'bootstrap-sass', '~> 3.3.6'
 end
 
 group :development do
