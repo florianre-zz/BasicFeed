@@ -14,10 +14,17 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     if @post.save
       flash[:success] = "Success!"
-      redirect_to request.referrer
+      redirect_to root_path
     else
       flash[:error] = "There was a problem..."
     end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to root_path
+    flash[:success] = "Successfully deleted post."
   end
 
 private
