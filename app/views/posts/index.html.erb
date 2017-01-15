@@ -1,8 +1,6 @@
 <h1>Basic Feed</h1>
-<%= bootstrap_form_for @post do |f| %>
-  <%= f.text_area :description, hide_label: true, placeholder: "Leave a comment..." %>
-  <%= f.submit "Post" %>
-<% end %>
+
+<%= render :template => 'posts/new' %>
 
 <% Post.all.each do |post| %>
 <body>
@@ -16,8 +14,8 @@
           <%= button_to 'Delete Post', post_path(post), method: :delete %>
         </div>
       </div>
-      <div class="panel-footer">
-        <div id="footer">Posted on ...</div>
+      <div class="panel-footer container-fluid">
+        <div id="footer" class="col-md-4">Posted on ...</div>
       </div>
     </div>
   </div>

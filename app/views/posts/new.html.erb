@@ -1,2 +1,4 @@
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+<%= bootstrap_form_for @post, :method => :new do |f| %>
+  <%= f.text_area :description, hide_label: true, placeholder: "Leave a comment..." %>
+  <%= f.submit "Post" %>
+<% end %>
