@@ -9,6 +9,15 @@
   </head>
 
   <body>
+    <% flash.each do |key, msg| %>
+      <div id="flash" class="alert <%= flash_class(key) %>">
+        <%= msg %>
+      </div>
+    <% end %>
     <%= yield %>
   </body>
+
+  <script>
+    setTimeout("$('#flash').fadeOut('slow')", 3000)
+  </script>
 </html>
