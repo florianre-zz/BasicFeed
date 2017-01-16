@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="panel-footer container-fluid">
-        <div id="footer" class="col-md-4">Posted on ...</div>
+        <div id="footer" class="col-md-4"><%= time_ago_in_words(post.created_at) + ' ago' %></div>
       </div>
     </div>
   </div>

@@ -15,7 +15,7 @@ class PostsController < ApplicationController
     if @post.save
       flash[:success] = "Success!"
     else
-      flash[:alert] = @post.errors[:description][0]
+      flash[:error] = @post.errors[:description][0]
     end
     redirect_to root_path
   end
