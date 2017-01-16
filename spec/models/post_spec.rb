@@ -11,4 +11,9 @@ RSpec.describe Post, type: :model do
     should validate_length_of(:description).is_at_most(max).with_message("#{max} characters is the maximum allowed.")
   end
 
+  it 'should have at least one character for description attribute' do
+    min = 1
+    should validate_length_of(:description).is_at_least(min).with_message("Empty message not allowed.")
+  end
+
 end
