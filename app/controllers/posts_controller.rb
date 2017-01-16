@@ -7,9 +7,6 @@ class PostsController < ApplicationController
     @posts = Post.order("created_at DESC").all
   end
 
-  def show
-  end
-
   def create
     @post = Post.new(post_params)
     if @post.save
