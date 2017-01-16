@@ -6,8 +6,9 @@ class Post < ApplicationRecord
   def decription_is_valid
     if !description.nil?
       if (description.length == 0)
-        flash[:error] = "Cannot publish empty post."
-      # elsif condition
+        errors.add(:description, "Message cannot be empty.")
+      elsif (description.length > 150)
+        errors.add(:description, "Message cannot be over 150 characters.")
       end
     end
   end

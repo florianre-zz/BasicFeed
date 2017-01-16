@@ -8,7 +8,7 @@
     <div class="panel panel-default" style="margin-top:10px">
       <div class="panel-body">
         <div id="content" class="col-md-10">
-          <%= post.description %>
+          <%= simple_format(post.description) %>
         </div>
         <div id="sidebar" class="col-md-2">
           <%= button_to 'Delete Post', post_path(post), method: :delete %>

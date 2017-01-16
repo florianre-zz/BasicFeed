@@ -14,10 +14,10 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     if @post.save
       flash[:success] = "Success!"
-      redirect_to root_path
     else
-      flash[:error] = "There was a problem..."
+      flash[:alert] = @post.errors[:description][0]
     end
+    redirect_to root_path
   end
 
   def destroy
