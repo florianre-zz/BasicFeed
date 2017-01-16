@@ -1,11 +1,11 @@
-<h1>Basic Feed</h1>
-
-<%= render :template => 'posts/new' %>
-
-<% @posts.each do |post| %>
 <body>
   <div id="main-container" class="container">
-    <div class="panel panel-default" style="margin-top:10px">
+  <h1>Simple Feed</h1>
+
+  <%= render :template => 'posts/new' %>
+
+  <% @posts.each do |post| %>
+    <div id="row_<%= post.id %>" class="panel panel-default" style="margin-top:10px">
       <div class="panel-body">
         <div id="content" class="col-md-10">
           <%= simple_format(post.description) %>
@@ -18,5 +18,6 @@
         <div id="footer" class="col-md-4"><%= time_ago_in_words(post.created_at) %> ago</div>
       </div>
     </div>
+    <% end %>
   </div>
-<% end %>
+</body>
