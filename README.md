@@ -1,26 +1,10 @@
 # README
+How to run application:
+  - Clone repository
+  - Cd into BasicFeed from terminal
+  - Run `bundle install`
+  - Run `rake db:migrate`
+  - Run `rails s`
+  - Go to address http://localhost:3000/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-# BasicFeed
+How to test application:
