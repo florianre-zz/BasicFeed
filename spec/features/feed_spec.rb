@@ -1,7 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "the feed interface" do
-
+RSpec.describe 'the feed interface' do
   it 'displays post' do
     visit '/'
 
@@ -9,9 +8,9 @@ RSpec.describe "the feed interface" do
     expect(page).to have_no_css('div#row_1')
     click_button 'Post'
     expect(page).to have_css('div#row_1')
-    expect(find("div#row_1")).to have_content('Hello World!')
-    expect(find("div#row_1")).to have_button('Delete Post')
-    expect(find("div#row_1")).to have_content('less than a minute ago')
+    expect(find('div#row_1')).to have_content('Hello World!')
+    expect(find('div#row_1')).to have_button('Delete Post')
+    expect(find('div#row_1')).to have_content('less than a minute ago')
   end
 
   it 'removes post' do
@@ -46,7 +45,7 @@ RSpec.describe "the feed interface" do
     expect(page).to have_content('Empty message not allowed.')
     expect(page).to have_no_css('div#row_1')
 
-    fill_in 'Description', with: "c"
+    fill_in 'Description', with: 'c'
     click_button 'Post'
     expect(page).to have_css('div#row_1')
   end
@@ -55,16 +54,15 @@ RSpec.describe "the feed interface" do
     max = 150
     visit '/'
 
-    str = "0" * max
+    str = '0' * max
     fill_in 'Description', with: str
     click_button 'Post'
     expect(page).to have_css('div#row_1')
 
-    str += "0"
+    str += '0'
     fill_in 'Description', with: str
     click_button 'Post'
     expect(page).to have_content("#{max} characters is the maximum allowed.")
     expect(page).to have_no_css('div#row_2')
   end
-
 end
