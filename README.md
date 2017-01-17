@@ -8,3 +8,5 @@ How to run application:
   - Go to address http://localhost:3000/
 
 How to test application:
+  - First 4 steps of how to run application
+  - Run `bundle exec rspec`
